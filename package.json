@@ -1,0 +1,31 @@
+{
+  "name": "05",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "build:styles": "sass ./src/styles/index.scss ./dist/styles.css",
+    "copy": "cp ./src/index.html ./dist/index.html",
+    "copy:html": "cp ./src/index.html ./dist/index.html",
+    "copy:scripts": "cp -R ./src/scripts ./dist/scripts",
+    "clean": "rm -rf ./dist",
+    "build": "npm-run-all clean build:styles copy:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KosanyakViktor/img-fetch.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KosanyakViktor/img-fetch/issues"
+  },
+  "homepage": "https://github.com/KosanyakViktor/img-fetch#readme",
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "sass": "^1.32.4"
+  }
+}
