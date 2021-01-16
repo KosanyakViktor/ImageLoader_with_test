@@ -9,7 +9,7 @@
     "build:styles": "sass ./src/styles/index.scss ./dist/styles.css",
     "copy": "cp ./src/index.html ./dist/index.html",
     "copy:html": "cp ./src/index.html ./dist/index.html",
-    "copy:scripts": "cp -R ./src/scripts ./dist/scripts",
+    "build:scripts": "babel ./src --out-dir=./dist",
     "clean": "rm -rf ./dist",
     "build": "npm-run-all clean build:styles copy:*"
   },
@@ -25,7 +25,13 @@
   },
   "homepage": "https://github.com/KosanyakViktor/img-fetch#readme",
   "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
     "jest": "^26.6.3",
     "sass": "^1.32.4"
+  },
+  "dependencies": {
+    "core-js": "^3.8.2"
   }
 }
